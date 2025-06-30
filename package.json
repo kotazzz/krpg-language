@@ -3,7 +3,7 @@
   "displayName": "KRPG Language Support",
   "description": "Language support for KRPG (Kotazzz RPG) - a domain-specific language for creating text-based RPG games",
   "version": "1.0.0",
-  "publisher": "kotazzz",
+  "publisher": "kotaz",
   "author": {
     "name": "kotazzz",
     "url": "https://github.com/kotazzz"

@@ -19,6 +19,7 @@ Visual Studio Code extension providing syntax highlighting and language support 
 ### Supported Language Elements
 
 #### Sections
+
 - `init` - Game initialization
 - `scenarios` - Story scenarios
 - `items` - Item definitions
@@ -27,11 +28,13 @@ Visual Studio Code extension providing syntax highlighting and language support 
 - `quests` - Quest definitions
 
 #### Control Flow
+
 - `if`, `while`, `for` - Conditional and loop constructs
 - `return`, `goto`, `stop`, `wait` - Flow control
 - `require`, `multiple`, `option` - Special flow controls
 
 #### Declarations
+
 - `action`, `stage` - Action and stage definitions
 - `item`, `npc`, `location` - Entity declarations
 - `link`, `lock`, `unlock` - Location management
@@ -39,6 +42,7 @@ Visual Studio Code extension providing syntax highlighting and language support 
 - `complete`, `evolve`, `quest` - Game state changes
 
 #### Variables and Constants
+
 - Variables starting with `_` (e.g., `_random`, `_time`)
 - UPPERCASE constants (e.g., `WEAPON`, `ARMOR`)
 - Numbers and quoted strings
@@ -86,7 +90,8 @@ locations {
 
 KRPG is a domain-specific language created by [kotazzz](https://github.com/kotazzz) for building text-based RPG games. The language provides a declarative syntax for defining game worlds, characters, items, quests, and interactive storylines.
 
-### Key Features of KRPG Games:
+### Key Features of KRPG Games
+
 - Rich storytelling with branching narratives
 - Complex character interactions
 - Item and inventory management
