@@ -1,0 +1,47 @@
+{
+  "name": "krpg-language",
+  "displayName": "KRPG Language Support",
+  "description": "Language support for KRPG (Kotazzz RPG) - a domain-specific language for creating text-based RPG games",
+  "version": "1.0.0",
+  "publisher": "kotazzz",
+  "author": {
+    "name": "kotazzz",
+    "url": "https://github.com/kotazzz"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kotazzz/krpg-language"
+  },
+  "bugs": {
+    "url": "https://github.com/kotazzz/krpg/issues"
+  },
+  "homepage": "https://github.com/kotazzz/krpg",
+  "keywords": [
+    "krpg",
+    "rpg",
+    "game",
+    "dsl",
+    "text-rpg",
+    "kotazzz"
+  ],
+  "engines": {
+    "vscode": "^1.101.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "krpg",
+      "aliases": ["KRPG", "krpg"],
+      "extensions": [".krpg"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "krpg",
+      "scopeName": "source.krpg",
+      "path": "./syntaxes/krpg.tmLanguage.json"
+    }]
+  }
+}

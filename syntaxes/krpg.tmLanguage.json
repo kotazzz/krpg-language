@@ -1,0 +1,104 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "KRPG",
+	"scopeName": "source.krpg",
+	"patterns": [
+		{ "include": "#comments" },
+		{ "include": "#strings" },
+		{ "include": "#blocks" },
+		{ "include": "#commands" },
+		{ "include": "#keywords" },
+		{ "include": "#constants" },
+		{ "include": "#numbers" },
+		{ "include": "#variables" },
+		{ "include": "#identifiers" }
+	],
+	"repository": {
+		"blocks": {
+			"patterns": [
+				{
+					"name": "punctuation.section.block.begin.krpg",
+					"match": "\\{"
+				},
+				{
+					"name": "punctuation.section.block.end.krpg",
+					"match": "\\}"
+				}
+			]
+		},
+		"comments": {
+			"name": "comment.line.number-sign.krpg",
+			"begin": "#",
+			"end": "$"
+		},
+		"commands": {
+			"patterns": [
+				{
+					"comment": "Общая команда, которая является первым словом в строке.",
+					"name": "entity.name.function.command.krpg",
+					"match": "^\\s*([a-zA-Z_][a-zA-Z0-9_]*)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"comment": "Подсвечивает любое слово в ВЕРХНЕМ РЕГИСТРЕ как константу.",
+					"name": "constant.language.uppercase.krpg",
+					"match": "\\b[A-Z][A-Z0-9_]*\\b"
+				}
+			]
+		},
+		"identifiers": {
+			"patterns": [
+				{
+					"name": "variable.parameter.krpg",
+					"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+				}
+			]
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.section.krpg",
+					"match": "\\b(init|scenarios|items|npcs|locations|quests)\\b"
+				},
+				{
+					"name": "keyword.control.flow.krpg",
+					"match": "\\b(if|while|for|return|goto|stop|wait|require|multiple|option)\\b"
+				},
+				{
+					"name": "keyword.other.declaration.krpg",
+					"match": "\\b(action|stage|item|npc|location|link|lock|unlock|start|end|goal|complete|evolve|quest)\\b"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.integer.krpg",
+					"match": "\\b\\d+\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.krpg",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.krpg",
+					"match": "\\\\."
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.other.krpg",
+					"match": "\\b_[a-zA-Z0-9_]+\\b"
+				}
+			]
+		}
+	}
+}
